@@ -1,1 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Stock Trend Tracker</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-widOCth, initial-scale=1">
 
+<style>
+* {xs
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+/* Style the header */
+header {
+  background-color: black;
+  padding: 1px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 40%;
+  /*height: 300px;  only for demonstration, should be removed */
+  background: black;
+  padding: 0px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 0px;
+  width: 60%;
+  background-color: black;
+  /*height: 300px;  only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/*Horizontal Scroll Box Start */
+
+#container {
+  display: flex;
+  overflow-x: scroll;
+  /*max-width: 50rem;*/
+  margin: 0 auto;
+}
+
+#container p {
+  font-family: sans-serif;
+  border: 2px solid powderblue;
+  border-radius: 8px;
+  background: black;
+  color: white;
+  
+  padding: 2rem 3rem;
+  margin: 2rem 1rem;
+}
+
+#container p2 {
+  font-family: avenir, Verdana, Geneva, avenir;
+  font-size: 2.0em;
+  border: 2px solid powderblue; 
+  border-radius: 8px;
+  background: black;
+  color: white;
+}
+
+/*Horizontal Scroll Box End */
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<header>
+  <h1>Trending Stocks on r/WallStreetBets</h1>
+  <h2 style="border:2px solid white;   border-radius: 1px; width: 300px; padding: 10px;font-size:14px;text-align:right;position: absolute;right: 0px;top: 0px">
+    <li><a href="#">Main Page (r/WallStreetBets)</a></li>
+    <li><a href="chart1">r/ShortSqueeze Trending Stocks</a></li>
+    <li><a href="chart2">Developer Team</a></li>
+  </h2>
+
+</header>
+
+<section>
+  <nav>
+    <ul>      
+      <div id="chart2" class="chart"></div>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>London</h1>
+    <div id="chart" class="chart"></div>
+  </article>
+</section>
+
+<footer>
+  <h2>Trending Stock Comments</h2>
+  <div id="container">
+  <p>
+    <p2>{{topDayTickers[0]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[0]}}</p>
+  <p>
+    <p2>{{topDayTickers[1]}}</p2>
+    <br>
+    <br>    
+    {{commentsArray[1]}}</p>
+  <p>
+    <p2>{{topDayTickers[2]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[2]}}</p>
+  <p>
+    <p2>{{topDayTickers[3]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[3]}}</p>
+  <p>
+    <p2>{{topDayTickers[4]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[4]}}</p>
+  <p>
+    <p2>{{topDayTickers[5]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[5]}}</p>
+  <p>
+    <p2>{{topDayTickers[6]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[6]}}</p>
+  <p>
+    <p2>{{topDayTickers[7]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[7]}}</p>
+  <p>
+    <p2>{{topDayTickers[8]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[8]}}</p>
+  <p>
+    <p2>{{topDayTickers[9]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[9]}}</p>
+  <p>
+    <p2>{{topDayTickers[10]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[10]}}</p>
+  <p>
+    <p2>{{topDayTickers[11]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[11]}}</p>
+  <p>
+    <p2>{{topDayTickers[12]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[12]}}</p>
+  <p>
+    <p2>{{topDayTickers[13]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[13]}}</p>
+  <p>
+    <p2>{{topDayTickers[14]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[14]}}</p>
+  <p>
+    <p2>{{topDayTickers[15]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[15]}}</p>
+  <p>
+    <p2>{{topDayTickers[16]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[16]}}</p>
+  <p>
+    <p2>{{topDayTickers[17]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[17]}}</p>
+  <p>
+    <p2>{{topDayTickers[18]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[18]}}</p>
+  <p>
+    <p2>{{topDayTickers[19]}}</p2>
+    <br>
+    <br>
+    {{commentsArray[19]}}</p>
+  </div>
+</footer>
+
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{graphJSON | safe}};
+    Plotly.plot('chart',graphs,{});
+    var graphs = {{graphJSON2 | safe}};
+    Plotly.plot('chart2',graphs,{});
+
+</script>
+
+
+ <script>
+  //You can use an IIFE (Immediately Invoked Function Expression)
+	
+  /*var text1 = {{temp2}};*/
+  var text1='asd'
+  /*var number = "123";*/
+  document.getElementById("myText").innerHTML = {{temp}};
+</script>
+
+
+</html>
+ 
