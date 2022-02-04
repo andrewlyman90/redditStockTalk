@@ -1,1 +1,17 @@
+body {
+  background: Black;
+  margin-top: 50px;
+  margin-left: 100px;
+  }
 
+p {
+  font-family: avenir, Georgia, avenir;
+  font-size: 1.2em;
+  color: Chartreuse;
+  }
+
+h1 {
+  font-family: avenir, Verdana, Geneva, avenir;
+  font-size: 2.5em;
+  color: Chartreuse;
+  }
